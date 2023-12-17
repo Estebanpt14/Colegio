@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: mi_contenedor_postgres
+    environment:
+      POSTGRES_DB: Colegio
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./datos_postgres:/var/lib/postgresql/data
