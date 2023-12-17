@@ -1,4 +1,5 @@
 datos_postgres/
 obj/
 bin/
+bin/*
 .idea/
