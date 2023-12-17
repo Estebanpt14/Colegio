@@ -50,10 +50,6 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
-              "target": "Package",
-              "version": "[2.0.0-preview1, )"
-            },
             "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite": {
               "target": "Package",
               "version": "[7.0.0, )"
