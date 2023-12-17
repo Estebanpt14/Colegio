@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Colegio.Models;
 
-public class Acudiente
+public class Estudiante
 {
+    [Key]
     public long NumeroDocumento { get; set; }
     
     public string Nombre { get; set; }
@@ -16,5 +19,9 @@ public class Acudiente
 
     public DateOnly FechaNacimiento { get; set; }
 
-    public int Telefono { get; set; }
+    public long Telefono { get; set; }
+
+    public Curso Curso { get; set; }
+    
+    public ICollection<NotaEstudiante> NotasEstudiantes { get; set; }
 }
