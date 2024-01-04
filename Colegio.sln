@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colegio", "Colegio\Colegio.csproj", "{F6A6227D-9CD2-42A7-939D-84E0696980EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{B70D0FA4-C7A4-4E82-A157-91D0837C9003}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colegio.Tests", "Colegio.Tests\Colegio.Tests.csproj", "{B70D0FA4-C7A4-4E82-A157-91D0837C9003}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
