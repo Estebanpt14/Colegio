@@ -19,7 +19,6 @@ public class EstudianteRepositoryTest
             databaseCotext.Estudiantes.AddRange(
                 new Estudiante()
                 {
-                    Correo = "prueba@gmail.com",
                     Curso = null,
                     DireccionResidencia = "Calle Larios #33-01",
                     Edad = 19,
@@ -27,12 +26,10 @@ public class EstudianteRepositoryTest
                     GrupoSanguineo = "A+",
                     Nombre = "Maria del Pilar Sarmiento",
                     NotasEstudiantes = null,
-                    NumeroDocumento = 1007819211,
-                    Telefono = 3101232244
+                    NumeroDocumento = 1007819211
                 },
                 new Estudiante()
                 {
-                    Correo = "prueba1@gmail.com",
                     Curso = null,
                     DireccionResidencia = "Calle 33 #33-01",
                     Edad = 23,
@@ -40,12 +37,10 @@ public class EstudianteRepositoryTest
                     GrupoSanguineo = "AB+",
                     Nombre = "Juan Pablo Cardenas Perez",
                     NotasEstudiantes = null,
-                    NumeroDocumento = 10093177711,
-                    Telefono = 3103432244
+                    NumeroDocumento = 10093177711
                 },
                 new Estudiante()
                 {
-                    Correo = "prueba2@gmail.com",
                     Curso = null,
                     DireccionResidencia = "Calle 21 #33-01",
                     Edad = 20,
@@ -53,8 +48,7 @@ public class EstudianteRepositoryTest
                     GrupoSanguineo = "O+",
                     Nombre = "Maria Chavez Perez",
                     NotasEstudiantes = null,
-                    NumeroDocumento = 1001237711,
-                    Telefono = 3109818811
+                    NumeroDocumento = 1001237711
                 }
             );
             await databaseCotext.SaveChangesAsync();

@@ -10,8 +10,6 @@ public class Acudiente
     public string Nombre { get; set; }
 
     public int Edad { get; set; }
-
-    public string Correo { get; set; }
     
     public string GrupoSanguineo { get; set; }
     
@@ -19,7 +17,7 @@ public class Acudiente
 
     public DateOnly FechaNacimiento { get; set; }
 
-    public long Telefono { get; set; }
-
     public Estudiante EstudianteHijo { get; set; }
+    
+    public Usuario Usuario { get; set; }
 }

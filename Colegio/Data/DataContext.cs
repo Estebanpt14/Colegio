@@ -27,6 +27,8 @@ public class DataContext : DbContext
     public DbSet<Periodo> Periodos { get; set; }
 
     public DbSet<Profesor> Profesores { get; set; }
+
+    public DbSet<Usuario> Usuarios { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -8,5 +8,12 @@
     &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.EstudianteControllerTests.GetEstudiante_ReturnOk&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.EstudianteControllerTests.CreateEstudiante_ReturnConflict&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.EstudianteControllerTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Repositories.RepositoryTests.GetAll_ShouldReturnEntities&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Repositories.RepositoryTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Repositories.UsuarioRepositoryTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.UsuarioControllerTest.RegisterEstudiante_ReturnOk&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.UsuarioControllerTest.RegisterEstudiante_ReturnConflict&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.UsuarioControllerTest.RegisterEstudiante_ReturnNotFound&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B70D0FA4-C7A4-4E82-A157-91D0837C9003::net7.0::Tests.Controllers.UsuarioControllerTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -2,10 +2,12 @@ using AutoMapper;
 using Colegio.Dto;
 using Colegio.Models;
 using Colegio.Repositories.IRepositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Colegio.Controllers;
 
+[Authorize]
 [Route("estudiante")]
 [ApiController]
 public class EstudianteController : Controller

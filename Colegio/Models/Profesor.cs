@@ -10,8 +10,6 @@ public class Profesor
     public string Nombre { get; set; }
 
     public int Edad { get; set; }
-
-    public string Correo { get; set; }
     
     public string GrupoSanguineo { get; set; }
     
@@ -19,7 +17,8 @@ public class Profesor
 
     public DateOnly FechaNacimiento { get; set; }
 
-    public long Telefono { get; set; }
-
     public ICollection<Materia> Materias { get; set; }
+    
+    public Usuario Usuario { get; set; }
+    
 }

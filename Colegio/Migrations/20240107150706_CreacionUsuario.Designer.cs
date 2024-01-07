@@ -3,6 +3,7 @@ using System;
 using Colegio.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Colegio.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240107150706_CreacionUsuario")]
+    partial class CreacionUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,6 +32,10 @@ namespace Colegio.Migrations
                         .HasColumnType("bigint");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("NumeroDocumento"));
+
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("DireccionResidencia")
                         .IsRequired()
@@ -51,6 +58,9 @@ namespace Colegio.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("UsuarioId")
                         .HasColumnType("text");
 
@@ -71,6 +81,10 @@ namespace Colegio.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("NumeroDocumento"));
 
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("DireccionResidencia")
                         .IsRequired()
                         .HasColumnType("text");
@@ -88,6 +102,9 @@ namespace Colegio.Migrations
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UsuarioId")
                         .HasColumnType("text");
@@ -121,6 +138,10 @@ namespace Colegio.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("NumeroDocumento"));
 
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("CursoCodigo")
                         .HasColumnType("text");
 
@@ -141,6 +162,9 @@ namespace Colegio.Migrations
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UsuarioId")
                         .HasColumnType("text");
@@ -256,6 +280,10 @@ namespace Colegio.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("NumeroDocumento"));
 
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("DireccionResidencia")
                         .IsRequired()
                         .HasColumnType("text");
@@ -273,6 +301,9 @@ namespace Colegio.Migrations
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UsuarioId")
                         .HasColumnType("text");
@@ -300,6 +331,12 @@ namespace Colegio.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
+
+                    b.Property<bool>("EsActivo")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");
@@ -333,7 +370,7 @@ namespace Colegio.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("Colegio.Models.Acudiente", b =>

@@ -10,5 +10,8 @@ public class ProfileMapper : Profile
     {
         CreateMap<Estudiante, EstudianteDto>();
         CreateMap<EstudianteDto, Estudiante>();
+        CreateMap<UsuarioDto, Usuario>()
+            .ForMember(usuario => usuario.PasswordHash, 
+                option => option.MapFrom(usuarioDto => usuarioDto.Password));
     }
 }

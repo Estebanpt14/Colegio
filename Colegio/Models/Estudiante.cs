@@ -10,8 +10,6 @@ public class Estudiante
     public string Nombre { get; set; }
 
     public int Edad { get; set; }
-
-    public string Correo { get; set; }
     
     public string GrupoSanguineo { get; set; }
     
@@ -19,9 +17,9 @@ public class Estudiante
 
     public DateOnly FechaNacimiento { get; set; }
 
-    public long Telefono { get; set; }
-
     public Curso Curso { get; set; }
     
     public ICollection<NotaEstudiante> NotasEstudiantes { get; set; }
+    
+    public Usuario Usuario { get; set; }
 }

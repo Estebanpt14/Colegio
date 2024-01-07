@@ -16,6 +16,7 @@ public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepositor
     public void Update(Estudiante estudiante)
     {
         _dataContext.Estudiantes.Update(estudiante);
+        Save();
     }
 
     public void Save()
