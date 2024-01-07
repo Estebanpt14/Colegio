@@ -1,20 +1,35 @@
 using Colegio.Data;
 using Colegio.Models;
-using Colegio.Repositories.Interfaces;
+using Colegio.Repositories.IRepositories;
 
 namespace Colegio.Repositories;
 
-public class EstudianteRepository : IEstudianteRepository
+public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepository
 {
     private readonly DataContext _dataContext;
     
-    public EstudianteRepository(DataContext dataContext)
+    public EstudianteRepository(DataContext dataContext) : base(dataContext)
     {
         this._dataContext = dataContext;
     }
 
-    public ICollection<Estudiante> GetEstudiantes()
+    public void Update(Estudiante estudiante)
     {
-        return this._dataContext.Estudiantes.ToList();
+        _dataContext.Estudiantes.Update(estudiante);
+    }
+
+    public void Save()
+    {
+        _dataContext.SaveChanges();
+    }
+
+    public bool EstudianteExists(long numeroDocumento)
+    {
+        return _dataContext.Estudiantes.Any(e => e.NumeroDocumento == numeroDocumento);
+    }
+
+    public Estudiante GetByNumeroDocumento(long numeroDocumento)
+    {
+        return _dataContext.Estudiantes.FirstOrDefault(e => e.NumeroDocumento == numeroDocumento);
     }
 }

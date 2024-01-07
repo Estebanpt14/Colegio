@@ -75,4 +75,41 @@ public class EstudianteRepositoryTest
         result.Should().NotBeNull();
         result.Should().BeOfType<Estudiante>();
     }
+    
+    [Fact]
+    public async void GetEstudianteByNumeroDocumento_ReturnEstudiante()
+    {
+        var numeroDocumento = 1007819211;
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetByNumeroDocumento(numeroDocumento);
+
+        result.Should().NotBeNull();
+        result.Should().BeOfType<Estudiante>();
+    }
+    
+    [Fact]
+    public async void EstudianteExists_ReturnTrue()
+    {
+        var numeroDocumento = 1007819211;
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.EstudianteExists(numeroDocumento);
+
+        result.Should().BeTrue();
+    }
+    
+    [Fact]
+    public async void EstudianteExists_ReturnFalse()
+    {
+        var numeroDocumento = 1001928312;
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.EstudianteExists(numeroDocumento);
+
+        result.Should().BeFalse();
+    }
 }
