@@ -12,37 +12,28 @@ namespace Colegio.Controllers;
 public class UsuarioController : ControllerBase
 {
    private readonly IUsuarioRepository _usuarioRepository;
-   private readonly IEstudianteRepository _estudianteRepository;
    private readonly IMapper _mapper;
     
-   public UsuarioController(IMapper mapper, IUsuarioRepository usuarioRepository, IEstudianteRepository estudianteRepository)
+   public UsuarioController(IMapper mapper, IUsuarioRepository usuarioRepository)
    {
       this._mapper = mapper;
       this._usuarioRepository = usuarioRepository;
-      this._estudianteRepository = estudianteRepository;
    }
 
    [HttpPost]
    [ProducesResponseType(204)]
    [ProducesResponseType(400)]
-   public IActionResult RegisterEstudiante(UsuarioDto usuarioDto, long numeroDocumento)
+   public IActionResult Register(UsuarioDto usuarioDto)
    {
       var usuario = _mapper.Map<Usuario>(usuarioDto);
       usuario.PasswordHash = Encryptor.Encrypt(usuarioDto.Password);
 
-      if (_usuarioRepository.UsuarioExists(usuario.UserName))
+      if (_usuarioRepository.UsuarioExists(usuarioDto.NumeroDocumento) 
+          || _usuarioRepository.UsuarioExistsByUsername(usuarioDto.UserName))
          return Conflict("The Object Already Exists");
 
-      if (!_estudianteRepository.EstudianteExists(numeroDocumento))
-         return NotFound("El estudiante no existe");
-
       if (_usuarioRepository.Add(usuario))
-      {
-         var estudiante = _estudianteRepository.Get(e => e.NumeroDocumento == numeroDocumento);
-         estudiante.Usuario = usuario;
-         _estudianteRepository.Update(estudiante);
          return Ok();
-      }
 
       ModelState.AddModelError("", "Something Wrong Happened");
       return StatusCode(500, ModelState);

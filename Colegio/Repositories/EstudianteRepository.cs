@@ -1,6 +1,7 @@
 using Colegio.Data;
 using Colegio.Models;
 using Colegio.Repositories.IRepositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Colegio.Repositories;
 
@@ -24,13 +25,25 @@ public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepositor
         _dataContext.SaveChanges();
     }
 
-    public bool EstudianteExists(long numeroDocumento)
+    public IEnumerable<Estudiante> GetAllWithUsers()
     {
-        return _dataContext.Estudiantes.Any(e => e.NumeroDocumento == numeroDocumento);
+        return _dataContext.Estudiantes.Include(e => e.Usuario).ToList();
     }
 
-    public Estudiante GetByNumeroDocumento(long numeroDocumento)
+    public bool EstudianteExists(long id)
     {
-        return _dataContext.Estudiantes.FirstOrDefault(e => e.NumeroDocumento == numeroDocumento);
+        return _dataContext.Estudiantes.Any(e => e.Id == id);
+    }
+
+    public Estudiante GetById(long id)
+    {
+        return _dataContext.Estudiantes.FirstOrDefault(e => e.Id == id);
+    }
+
+    public IEnumerable<Estudiante> GetByUsuarios(List<string> listUsuarios)
+    {
+        return _dataContext.Estudiantes
+            .Where(e => e.Usuario != null && listUsuarios.Contains(e.Usuario.Id))
+            .ToList();
     }
 }

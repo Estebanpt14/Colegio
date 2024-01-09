@@ -7,7 +7,11 @@ public interface IEstudianteRepository : IRepository<Estudiante>
     void Update(Estudiante estudiante);
     void Save();
 
-    bool EstudianteExists(long numeroDocumento);
+    IEnumerable<Estudiante> GetAllWithUsers();
+
+    bool EstudianteExists(long id);
     
-    Estudiante GetByNumeroDocumento(long numeroDocumento);
+    Estudiante GetById(long id);
+
+    public IEnumerable<Estudiante> GetByUsuarios(List<string> listUsuarios);
 }

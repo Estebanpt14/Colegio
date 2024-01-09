@@ -19,36 +19,29 @@ public class EstudianteRepositoryTest
             databaseCotext.Estudiantes.AddRange(
                 new Estudiante()
                 {
+                    Id = 1,
                     Curso = null,
-                    DireccionResidencia = "Calle Larios #33-01",
-                    Edad = 19,
-                    FechaNacimiento = new DateOnly(2005, 1, 1),
-                    GrupoSanguineo = "A+",
-                    Nombre = "Maria del Pilar Sarmiento",
                     NotasEstudiantes = null,
-                    NumeroDocumento = 1007819211
+                    Usuario = new Usuario
+                    {
+                        Id = "123",
+                        DireccionResidencia = "xxx",
+                        GrupoSanguineo = "A+",
+                        Nombre = "Pedro Pablo"
+                    }
                 },
                 new Estudiante()
                 {
+                    Id = 2,
                     Curso = null,
-                    DireccionResidencia = "Calle 33 #33-01",
-                    Edad = 23,
-                    FechaNacimiento = new DateOnly(2001, 1, 1),
-                    GrupoSanguineo = "AB+",
-                    Nombre = "Juan Pablo Cardenas Perez",
                     NotasEstudiantes = null,
-                    NumeroDocumento = 10093177711
-                },
-                new Estudiante()
-                {
-                    Curso = null,
-                    DireccionResidencia = "Calle 21 #33-01",
-                    Edad = 20,
-                    FechaNacimiento = new DateOnly(2004, 1, 1),
-                    GrupoSanguineo = "O+",
-                    Nombre = "Maria Chavez Perez",
-                    NotasEstudiantes = null,
-                    NumeroDocumento = 1001237711
+                    Usuario = new Usuario
+                    {
+                        Id = "124",
+                        DireccionResidencia = "xxx",
+                        GrupoSanguineo = "A+",
+                        Nombre = "Pedro Pablo"
+                    }
                 }
             );
             await databaseCotext.SaveChangesAsync();
@@ -56,37 +49,11 @@ public class EstudianteRepositoryTest
 
         return databaseCotext;
     }
-
-    [Fact]
-    public async void GetEstudiantes_ReturnEstudiantes()
-    {
-        var nombre = "Maria del Pilar Sarmiento";
-        var dbContext = await GetDatabaseContext();
-        var estudianteRepository = new EstudianteRepository(dbContext);
-
-        var result = estudianteRepository.Get(e => e.Nombre.Equals(nombre));
-
-        result.Should().NotBeNull();
-        result.Should().BeOfType<Estudiante>();
-    }
-    
-    [Fact]
-    public async void GetEstudianteByNumeroDocumento_ReturnEstudiante()
-    {
-        var numeroDocumento = 1007819211;
-        var dbContext = await GetDatabaseContext();
-        var estudianteRepository = new EstudianteRepository(dbContext);
-
-        var result = estudianteRepository.GetByNumeroDocumento(numeroDocumento);
-
-        result.Should().NotBeNull();
-        result.Should().BeOfType<Estudiante>();
-    }
     
     [Fact]
     public async void EstudianteExists_ReturnTrue()
     {
-        var numeroDocumento = 1007819211;
+        var numeroDocumento = 1;
         var dbContext = await GetDatabaseContext();
         var estudianteRepository = new EstudianteRepository(dbContext);
 
@@ -98,12 +65,68 @@ public class EstudianteRepositoryTest
     [Fact]
     public async void EstudianteExists_ReturnFalse()
     {
-        var numeroDocumento = 1001928312;
+        var numeroDocumento = 3;
         var dbContext = await GetDatabaseContext();
         var estudianteRepository = new EstudianteRepository(dbContext);
 
         var result = estudianteRepository.EstudianteExists(numeroDocumento);
 
         result.Should().BeFalse();
+    }
+    
+    [Fact]
+    public async void GetById_ReturnEstudiante()
+    {
+        var numeroDocumento = 1;
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetById(numeroDocumento);
+
+        result.Should().NotBeNull();
+        result.Should().BeOfType(typeof(Estudiante));
+    }
+    
+    
+    
+    [Fact]
+    public async void GetById_ReturnNull()
+    {
+        var numeroDocumento = 3;
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetById(numeroDocumento);
+
+        result.Should().BeNull();
+    }
+    
+    [Fact]
+    public async void GetAllWithUsers_ReturnEstudiantes()
+    {
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetAllWithUsers();
+
+        foreach (var es in result)
+        {
+            es.Usuario.Should().NotBeNull();
+        }
+    }
+    
+    [Fact]
+    public async void GetByUsuarios_ReturnEstudiantes()
+    {
+        var listUsuarios = new List<String>();
+        listUsuarios.Add("123");
+        listUsuarios.Add("103");
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetByUsuarios(listUsuarios);
+
+        result.Should().NotBeNull();
+        result.Should().BeOfType(typeof(List<Estudiante>));
     }
 }
