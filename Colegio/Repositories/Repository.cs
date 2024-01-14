@@ -47,6 +47,12 @@ public class Repository<T> : IRepository<T> where T : class
         return Save();
     }
 
+    public bool Update(T data)
+    {
+        this.dbSet.Update(data);
+        return Save();
+    }
+
     public bool Save()
     {
         return _dataContext.SaveChanges() > 0;

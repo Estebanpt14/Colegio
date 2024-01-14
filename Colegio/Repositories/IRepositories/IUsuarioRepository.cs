@@ -7,8 +7,12 @@ public interface IUsuarioRepository : IRepository<Usuario>
     bool UsuarioExists(string numeroDocumento);
     
     bool UsuarioExistsByUsername(string username);
+    
+    Usuario GetUsuarioByUsernamePassword(string username, string password);
 
-    public void AddRolToUsuario(Usuario usuario, string nombreRol);
+    void AddRolToUsuario(Usuario usuario, string nombreRol);
 
-    public List<string> getIdsByRoleName(string roleName);
+    List<string> GetIdsByRoleName(string roleName);
+
+    List<string> GetRoles(Usuario usuario);
 }

@@ -46,4 +46,10 @@ public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepositor
             .Where(e => e.Usuario != null && listUsuarios.Contains(e.Usuario.Id))
             .ToList();
     }
+    
+    public Estudiante GetByUsuario(string numeroDocumento)
+    {
+        return _dataContext.Estudiantes
+            .FirstOrDefault(e => e.Usuario != null && e.UsuarioId == numeroDocumento);
+    }
 }

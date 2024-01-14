@@ -129,4 +129,29 @@ public class EstudianteRepositoryTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(List<Estudiante>));
     }
+
+    [Fact]
+    public async void GetByUsuario_ReturnUsuario()
+    {
+        var numeroDocumento = "123";
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetByUsuario(numeroDocumento);
+
+        result.Should().NotBeNull();
+        result.Should().BeOfType(typeof(Estudiante));
+    }
+    
+    [Fact]
+    public async void GetByUsuario_ReturnNull()
+    {
+        var numeroDocumento = "1230";
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.GetByUsuario(numeroDocumento);
+
+        result.Should().BeNull();
+    }
 }

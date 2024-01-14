@@ -1,6 +1,7 @@
 using Colegio.Data;
 using Colegio.Models;
 using Colegio.Repositories.IRepositories;
+using Colegio.Utilities;
 using Microsoft.AspNetCore.Identity;
 
 namespace Colegio.Repositories;
@@ -25,6 +26,12 @@ public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
     {
         return _dataContext.Usuarios.Any(e => e.UserName == username);
     }
+    
+    public Usuario GetUsuarioByUsernamePassword(string username, string password)
+    {
+        return _dataContext.Usuarios.FirstOrDefault(e => e.UserName == username 
+                                              && e.PasswordHash == Encryptor.Encrypt(password));
+    }
 
     public void AddRolToUsuario(Usuario usuario, string nombreRol)
     {
@@ -32,10 +39,17 @@ public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
         result.Wait();
     }
 
-    public List<string> getIdsByRoleName(string roleName)
+    public List<string> GetIdsByRoleName(string roleName)
     {
         var result = _userManager.GetUsersInRoleAsync(roleName);
         result.Wait();
         return result.Result.Select(e => e.Id).ToList();
+    }
+    
+    public List<string> GetRoles(Usuario usuario)
+    {
+        var result = _userManager.GetRolesAsync(usuario);
+        result.Wait();
+        return result.Result.ToList();
     }
 }

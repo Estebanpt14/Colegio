@@ -2,7 +2,7 @@ namespace Colegio.Dto;
 
 public class EstudianteDto
 {
-    public long NumeroDocumento { get; set; }
+    public string NumeroDocumento { get; set; }
     
     public string Username { get; set; }
     

@@ -1,4 +1,5 @@
 using Colegio.Models;
+using Colegio.Utilities;
 using Colegio.Utilities.Constants;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -73,10 +74,33 @@ public class DataContext : IdentityDbContext<Usuario>
 
         // Configurar datos iniciales (seed data) para Roles
         modelBuilder.Entity<IdentityRole>().HasData(
-            new IdentityRole { Id = DatabaseRoles.Administrador, Name = "Administrador", NormalizedName = "ADMINISTRADOR" },
-            new IdentityRole { Id = DatabaseRoles.Estudiante, Name = "Estudiante", NormalizedName = "ESTUDIANTE" },
-            new IdentityRole { Id = DatabaseRoles.Acudiente, Name = "Acudiente", NormalizedName = "ACUDIENTE" },
-            new IdentityRole { Id = DatabaseRoles.Profesor, Name = "Profesor", NormalizedName = "PROFESOR" }
+            new IdentityRole { Id = "1", Name = DatabaseRoles.Administrador, NormalizedName = DatabaseRoles.Administrador.ToUpper() },
+            new IdentityRole { Id = "2", Name = DatabaseRoles.Estudiante, NormalizedName = DatabaseRoles.Estudiante.ToUpper() },
+            new IdentityRole { Id = "3", Name = DatabaseRoles.Acudiente, NormalizedName = DatabaseRoles.Acudiente.ToUpper() },
+            new IdentityRole { Id = "4", Name = DatabaseRoles.Profesor, NormalizedName = DatabaseRoles.Profesor.ToUpper() }
+        );
+        modelBuilder.Entity<Usuario>().HasData(
+            new Usuario
+            {
+                Id = "1", UserName = "Admin", NormalizedUserName = "ADMIN", Email = "default@gmail.com",
+                PasswordHash = Encryptor.Encrypt("1234"), Nombre = "Admin",
+                DireccionResidencia = "Direccion Colegio", GrupoSanguineo = "NA"
+            }
+        );
+        modelBuilder.Entity<Administrador>().HasData(
+            new Administrador
+            {
+                Id = 1,
+                UsuarioId = "1"
+            }
+        );
+
+        modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+            new IdentityUserRole<string>
+            {
+                RoleId = "1",
+                UserId = "1"
+            }
         );
      
         base.OnModelCreating(modelBuilder);

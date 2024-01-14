@@ -3,6 +3,7 @@ using System;
 using Colegio.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Colegio.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240114214151_CreacionAdmin")]
+    partial class CreacionAdmin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,6 +98,7 @@ namespace Colegio.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("CursoCodigo")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("UsuarioId")
@@ -311,7 +315,7 @@ namespace Colegio.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b2e18259-1ab2-42b6-927e-a06b0177e3f1",
+                            ConcurrencyStamp = "105205b6-b83c-40ee-9cb3-4f73cab45a42",
                             DireccionResidencia = "Direccion Colegio",
                             Edad = 0,
                             Email = "default@gmail.com",
@@ -323,7 +327,7 @@ namespace Colegio.Migrations
                             NormalizedUserName = "ADMIN",
                             PasswordHash = "1i9An9QtNefe3id3HweUqA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bbbd7e31-788c-4feb-98f5-58d4d7465aaa",
+                            SecurityStamp = "d11a58b7-4018-4e9d-82e1-685fa967f1fc",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -544,7 +548,9 @@ namespace Colegio.Migrations
                 {
                     b.HasOne("Colegio.Models.Curso", "Curso")
                         .WithMany("Estudiantes")
-                        .HasForeignKey("CursoCodigo");
+                        .HasForeignKey("CursoCodigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Colegio.Models.Usuario", "Usuario")
                         .WithMany()

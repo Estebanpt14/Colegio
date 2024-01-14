@@ -1,6 +1,7 @@
 using Colegio.Data;
 using Colegio.Models;
 using Colegio.Repositories;
+using Colegio.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,10 +10,14 @@ namespace Tests.Repositories;
 public class UsuarioRepositoryTest
 {
     private readonly UserManager<Usuario> _userManager;
+    private DataContext DataBaseContext;
 
     public UsuarioRepositoryTest()
     {
         this._userManager = A.Fake<UserManager<Usuario>>();
+        var aux = GetDatabaseContext();
+        aux.Wait();
+        DataBaseContext = aux.Result;
     }
     private async Task<DataContext> GetDatabaseContext()
     {
@@ -21,14 +26,14 @@ public class UsuarioRepositoryTest
             .Options;
         var databaseCotext = new DataContext(options);
         databaseCotext.Database.EnsureCreated();
-        if (await databaseCotext.Usuarios.CountAsync() <= 0)
+        if (await databaseCotext.Usuarios.CountAsync() <= 1)
         {
             databaseCotext.Usuarios.AddRange(
                 new Usuario()
                 {
                     Id = "123",
                     UserName = "akjsdh",
-                    PasswordHash = "123123",
+                    PasswordHash = Encryptor.Encrypt("123123"),
                     DireccionResidencia = "x",
                     GrupoSanguineo = "A+",
                     Nombre = "Pedro Dominguez"
@@ -37,7 +42,7 @@ public class UsuarioRepositoryTest
                 {
                     Id = "1234",
                     UserName = "akjsdh1",
-                    PasswordHash = "1231231",
+                    PasswordHash = Encryptor.Encrypt("1231231"),
                     DireccionResidencia = "x",
                     GrupoSanguineo = "A+",
                     Nombre = "Pablo Dominguez"
@@ -50,11 +55,10 @@ public class UsuarioRepositoryTest
     }
     
     [Fact]
-    public async void UsuarioExists_ReturnTrue()
+    public void UsuarioExists_ReturnTrue()
     {
         var numeroDocumento = "123";
-        var dbContext = await GetDatabaseContext();
-        var usuarioRepository = new UsuarioRepository(dbContext, _userManager);
+        var usuarioRepository = new UsuarioRepository(DataBaseContext, _userManager);
 
         var result = usuarioRepository.UsuarioExists(numeroDocumento);
 
@@ -62,11 +66,10 @@ public class UsuarioRepositoryTest
     }
     
     [Fact]
-    public async void UsuarioExists_ReturnFalse()
+    public void UsuarioExists_ReturnFalse()
     {
         var numeroDocumento = "120";
-        var dbContext = await GetDatabaseContext();
-        var usuarioRepository = new UsuarioRepository(dbContext, _userManager);
+        var usuarioRepository = new UsuarioRepository(DataBaseContext, _userManager);
 
         var result = usuarioRepository.UsuarioExists(numeroDocumento);
 
@@ -74,11 +77,10 @@ public class UsuarioRepositoryTest
     }
     
     [Fact]
-    public async void UsuarioExistsByUsername_ReturnTrue()
+    public void UsuarioExistsByUsername_ReturnTrue()
     {
         var username = "akjsdh";
-        var dbContext = await GetDatabaseContext();
-        var usuarioRepository = new UsuarioRepository(dbContext, _userManager);
+        var usuarioRepository = new UsuarioRepository(DataBaseContext, _userManager);
 
         var result = usuarioRepository.UsuarioExistsByUsername(username);
 
@@ -86,14 +88,38 @@ public class UsuarioRepositoryTest
     }
     
     [Fact]
-    public async void UsuarioExistsByUsername_ReturnFalse()
+    public void UsuarioExistsByUsername_ReturnFalse()
     {
         var username = "1234";
-        var dbContext = await GetDatabaseContext();
-        var usuarioRepository = new UsuarioRepository(dbContext, _userManager);
+        var usuarioRepository = new UsuarioRepository(DataBaseContext, _userManager);
 
         var result = usuarioRepository.UsuarioExistsByUsername(username);
 
         result.Should().BeFalse();
+    }
+
+    [Fact]
+    public void GetUsuarioByUsernamePassword_ReturnUsuario()
+    {
+        var username = "akjsdh";
+        var passwordHash = "123123";
+        var usuarioRepository = new UsuarioRepository(DataBaseContext, _userManager);
+
+        var result = usuarioRepository.GetUsuarioByUsernamePassword(username, passwordHash);
+
+        result.Should().NotBeNull();
+        result.Should().BeOfType(typeof(Usuario));
+    }
+    
+    [Fact]
+    public void GetUsuarioByUsernamePassword_ReturnNull()
+    {
+        var username = "akjsdh1";
+        var passwordHash = "12233123";
+        var usuarioRepository = new UsuarioRepository(DataBaseContext, _userManager);
+
+        var result = usuarioRepository.GetUsuarioByUsernamePassword(username, passwordHash);
+
+        result.Should().BeNull();
     }
 }

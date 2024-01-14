@@ -3,6 +3,7 @@ using System;
 using Colegio.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Colegio.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240114213412_CreacionUsuarioMaestro")]
+    partial class CreacionUsuarioMaestro
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,16 +33,15 @@ namespace Colegio.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<long>("EstudianteId")
+                    b.Property<long>("EstudianteHijoId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("UsuarioId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EstudianteId");
+                    b.HasIndex("EstudianteHijoId");
 
                     b.HasIndex("UsuarioId");
 
@@ -55,7 +57,6 @@ namespace Colegio.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("UsuarioId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -63,13 +64,6 @@ namespace Colegio.Migrations
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Administradores");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            UsuarioId = "1"
-                        });
                 });
 
             modelBuilder.Entity("Colegio.Models.Curso", b =>
@@ -98,7 +92,6 @@ namespace Colegio.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("UsuarioId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -213,7 +206,6 @@ namespace Colegio.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("UsuarioId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -311,7 +303,7 @@ namespace Colegio.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b2e18259-1ab2-42b6-927e-a06b0177e3f1",
+                            ConcurrencyStamp = "74fea56b-1aa6-4792-a13c-7e74f6df0513",
                             DireccionResidencia = "Direccion Colegio",
                             Edad = 0,
                             Email = "default@gmail.com",
@@ -323,7 +315,7 @@ namespace Colegio.Migrations
                             NormalizedUserName = "ADMIN",
                             PasswordHash = "1i9An9QtNefe3id3HweUqA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bbbd7e31-788c-4feb-98f5-58d4d7465aaa",
+                            SecurityStamp = "5d0bff5f-e9e2-48c0-98e5-9f276b59162d",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -514,15 +506,13 @@ namespace Colegio.Migrations
                 {
                     b.HasOne("Colegio.Models.Estudiante", "EstudianteHijo")
                         .WithMany()
-                        .HasForeignKey("EstudianteId")
+                        .HasForeignKey("EstudianteHijoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Colegio.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("EstudianteHijo");
 
@@ -533,9 +523,7 @@ namespace Colegio.Migrations
                 {
                     b.HasOne("Colegio.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Usuario");
                 });
@@ -548,9 +536,7 @@ namespace Colegio.Migrations
 
                     b.HasOne("Colegio.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Curso");
 
@@ -619,9 +605,7 @@ namespace Colegio.Migrations
                 {
                     b.HasOne("Colegio.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Usuario");
                 });
