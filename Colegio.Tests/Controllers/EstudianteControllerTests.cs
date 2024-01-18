@@ -5,6 +5,8 @@ using Colegio.Models;
 using Colegio.Repositories.IRepositories;
 using Colegio.Utilities.Constants;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 
 namespace Tests.Controllers;
 
@@ -13,6 +15,11 @@ public class EstudianteControllerTests
     private readonly IEstudianteRepository _estudianteRepository = A.Fake<IEstudianteRepository>();
     private readonly IMapper _mapper = A.Fake<IMapper>();
     private readonly IUsuarioRepository _usuarioRepository = A.Fake<IUsuarioRepository>();
+
+    public EstudianteControllerTests()
+    {
+
+    }
 
     [Fact]
     public void GetEstudiantes_ReturnOk()
@@ -29,7 +36,7 @@ public class EstudianteControllerTests
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkObjectResult));
     }
-    
+
     [Fact]
     public void GetEstudiante_ReturnOk()
     {
@@ -47,7 +54,7 @@ public class EstudianteControllerTests
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkObjectResult));
     }
-    
+
     [Fact]
     public void GetEstudiante_ReturnNotFound()
     {
@@ -79,7 +86,7 @@ public class EstudianteControllerTests
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkObjectResult));
     }
-    
+
     [Fact]
     public void CreateEstudiante_ReturnNotFound()
     {
@@ -114,7 +121,7 @@ public class EstudianteControllerTests
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkResult));
     }
-    
+
     [Fact]
     public void ChangePassword_ReturnNotFound()
     {
@@ -154,7 +161,7 @@ public class EstudianteControllerTests
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkObjectResult));
     }
-    
+
     [Fact]
     public void GetEstudianteByUsuario_ReturnNotFoundUsuario()
     {
@@ -173,7 +180,7 @@ public class EstudianteControllerTests
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(NotFoundObjectResult));
     }
-    
+
     [Fact]
     public void GetEstudianteByUsuario_ReturnNotFoundEstudiante()
     {

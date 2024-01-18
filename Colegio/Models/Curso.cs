@@ -6,7 +6,7 @@ public class Curso
 {
     [Key]
     public string Codigo { get; set; }
-    
+
     public string Observaciones { get; set; }
 
     public ICollection<Materia> Materias { get; set; }

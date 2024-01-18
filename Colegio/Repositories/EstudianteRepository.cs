@@ -8,7 +8,7 @@ namespace Colegio.Repositories;
 public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepository
 {
     private readonly DataContext _dataContext;
-    
+
     public EstudianteRepository(DataContext dataContext) : base(dataContext)
     {
         this._dataContext = dataContext;
@@ -46,7 +46,7 @@ public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepositor
             .Where(e => e.Usuario != null && listUsuarios.Contains(e.Usuario.Id))
             .ToList();
     }
-    
+
     public Estudiante GetByUsuario(string numeroDocumento)
     {
         return _dataContext.Estudiantes

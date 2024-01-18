@@ -5,7 +5,7 @@ namespace Colegio.Models;
 public class NotaEstudiante
 {
     public long NotaId { get; set; }
-    
+
     public long EstudianteNumeroDocumento { get; set; }
 
     public Nota Nota { get; set; }

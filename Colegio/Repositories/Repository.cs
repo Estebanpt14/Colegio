@@ -9,13 +9,13 @@ public class Repository<T> : IRepository<T> where T : class
 {
     private readonly DataContext _dataContext;
     internal DbSet<T> dbSet;
-    
+
     public Repository(DataContext dataContext)
     {
         this._dataContext = dataContext;
         this.dbSet = _dataContext.Set<T>();
     }
-    
+
     public IEnumerable<T> GetAll()
     {
         IQueryable<T> query = dbSet;

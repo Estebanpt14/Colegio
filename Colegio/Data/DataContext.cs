@@ -33,9 +33,9 @@ public class DataContext : IdentityDbContext<Usuario>
     public DbSet<Profesor> Profesores { get; set; }
 
     public DbSet<Usuario> Usuarios { get; set; }
-    
+
     public DbSet<Rol> Roles { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Configurar la nueva columna de la clave primaria en ApplicationUser
@@ -82,9 +82,14 @@ public class DataContext : IdentityDbContext<Usuario>
         modelBuilder.Entity<Usuario>().HasData(
             new Usuario
             {
-                Id = "1", UserName = "Admin", NormalizedUserName = "ADMIN", Email = "default@gmail.com",
-                PasswordHash = Encryptor.Encrypt("1234"), Nombre = "Admin",
-                DireccionResidencia = "Direccion Colegio", GrupoSanguineo = "NA"
+                Id = "1",
+                UserName = "Admin",
+                NormalizedUserName = "ADMIN",
+                Email = "default@gmail.com",
+                PasswordHash = Encryptor.Encrypt("1234"),
+                Nombre = "Admin",
+                DireccionResidencia = "Direccion Colegio",
+                GrupoSanguineo = "NA"
             }
         );
         modelBuilder.Entity<Administrador>().HasData(
@@ -102,7 +107,7 @@ public class DataContext : IdentityDbContext<Usuario>
                 UserId = "1"
             }
         );
-     
+
         base.OnModelCreating(modelBuilder);
     }
 

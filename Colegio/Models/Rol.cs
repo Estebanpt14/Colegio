@@ -4,5 +4,5 @@ namespace Colegio.Models;
 
 public class Rol : IdentityRole
 {
-    
+
 }

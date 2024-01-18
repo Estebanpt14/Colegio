@@ -40,7 +40,7 @@ public class UsuarioControllerTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkResult));
     }
-    
+
     [Fact]
     public void RegisterEstudiante_ReturnConflict()
     {
@@ -61,7 +61,7 @@ public class UsuarioControllerTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(ConflictObjectResult));
     }
-    
+
     [Fact]
     public void RegisterEstudiante_ReturnConflictUsername()
     {
@@ -108,7 +108,7 @@ public class UsuarioControllerTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(OkObjectResult));
     }
-    
+
     [Fact]
     public void Login_ReturnNotFound()
     {

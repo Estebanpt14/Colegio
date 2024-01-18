@@ -8,6 +8,8 @@ using Colegio.Repositories.IRepositories;
 using Colegio.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Events;
 
 namespace Colegio.Controllers;
 
@@ -15,88 +17,107 @@ namespace Colegio.Controllers;
 [ApiController]
 public class UsuarioController : ControllerBase
 {
-   private readonly IUsuarioRepository _usuarioRepository;
-   private readonly IMapper _mapper;
-   private readonly IConfiguration _configuration;
-    
-   public UsuarioController(IMapper mapper, IUsuarioRepository usuarioRepository, 
-      IConfiguration configuration)
-   {
-      this._mapper = mapper;
-      this._usuarioRepository = usuarioRepository;
-      this._configuration = configuration;
-   }
+    private readonly IUsuarioRepository _usuarioRepository;
+    private readonly IMapper _mapper;
+    private readonly IConfiguration _configuration;
 
-   [HttpPost("register")]
-   [ProducesResponseType(200)]
-   [ProducesResponseType(409)]
-   public IActionResult Register(UsuarioDto usuarioDto)
-   {
-      var usuario = _mapper.Map<Usuario>(usuarioDto);
-      usuario.PasswordHash = Encryptor.Encrypt(usuarioDto.Password);
+    public UsuarioController(IMapper mapper, IUsuarioRepository usuarioRepository,
+       IConfiguration configuration)
+    {
+        this._mapper = mapper;
+        this._usuarioRepository = usuarioRepository;
+        this._configuration = configuration;
+    }
 
-      if (_usuarioRepository.UsuarioExists(usuarioDto.NumeroDocumento) 
-          || _usuarioRepository.UsuarioExistsByUsername(usuarioDto.UserName))
-         return Conflict("The Object Already Exists");
+    [HttpPost("register")]
+    [ProducesResponseType(200)]
+    [ProducesResponseType(409)]
+    public IActionResult Register(UsuarioDto usuarioDto)
+    {
+        var usuario = _mapper.Map<Usuario>(usuarioDto);
+        usuario.PasswordHash = Encryptor.Encrypt(usuarioDto.Password);
 
-      if (_usuarioRepository.Add(usuario))
-         return Ok();
+        if (_usuarioRepository.UsuarioExists(usuarioDto.NumeroDocumento)
+            || _usuarioRepository.UsuarioExistsByUsername(usuarioDto.UserName))
+        {
+            Log.Write(LogEventLevel.Warning, "El usuario {@result} ya existe",
+               usuario.UserName);
+            return Conflict("The Object Already Exists");
+        }
 
-      ModelState.AddModelError("", "Something Wrong Happened");
-      return StatusCode(500, ModelState);
-   }
-    
-   [HttpPost("login")]
-   [ProducesResponseType(200, Type = typeof(string))]
-   [ProducesResponseType(404)]
-   public IActionResult Login(UsuarioLoginDto usuarioDto)
-   {
-      usuarioDto.Password = Encryptor.Encrypt(usuarioDto.Password);
+        if (_usuarioRepository.Add(usuario))
+        {
+            Log.Write(LogEventLevel.Information, "Usuario {@result} creado",
+               usuario.UserName);
+            return Ok();
+        }
 
-      if (!_usuarioRepository.UsuarioExistsByUsername(usuarioDto.UserName))
-         return NotFound("User not found");
+        ModelState.AddModelError("", "Something Wrong Happened");
+        return StatusCode(500, ModelState);
+    }
 
-      var usuario = _usuarioRepository.GetUsuarioByUsernamePassword(
-         usuarioDto.UserName, usuarioDto.Password
-      );
-      
-      if(usuario == null)
-         return NotFound("User not found");
-      
-      if (!ModelState.IsValid)
-         return BadRequest();
+    [HttpPost("login")]
+    [ProducesResponseType(200, Type = typeof(string))]
+    [ProducesResponseType(404)]
+    public IActionResult Login(UsuarioLoginDto usuarioDto)
+    {
+        usuarioDto.Password = Encryptor.Encrypt(usuarioDto.Password);
 
-      string token = CreateToken(usuario);
-      
-      return Ok(token);
-   }
+        if (!_usuarioRepository.UsuarioExistsByUsername(usuarioDto.UserName))
+        {
+            Log.Write(LogEventLevel.Warning, "Usuario {@result} no encontrado",
+               usuarioDto.UserName);
+            return NotFound("User not found");
+        }
 
-   private string CreateToken(Usuario usuario)
-   {
-      var roles = _usuarioRepository.GetRoles(usuario);
-      
-      var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-      var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        var usuario = _usuarioRepository.GetUsuarioByUsernamePassword(
+           usuarioDto.UserName, usuarioDto.Password
+        );
 
-      var claims = new List<Claim>
+        if (usuario == null)
+        {
+            Log.Write(LogEventLevel.Warning, "Usuario {@result} no encontrado",
+               usuarioDto.UserName);
+            return NotFound("User not found");
+        }
+
+        if (!ModelState.IsValid)
+            return BadRequest();
+
+        string token = CreateToken(usuario);
+
+        Log.Write(LogEventLevel.Warning, "Usuario {@result} ha iniciado sesion",
+           usuario.UserName);
+
+        return Ok(token);
+    }
+
+    private string CreateToken(Usuario usuario)
+    {
+        var roles = _usuarioRepository.GetRoles(usuario);
+
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        var claims = new List<Claim>
       {
          new Claim(ClaimTypes.Name, usuario.UserName)
       };
 
-      claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
+        claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
-      var tokenDescriptor = new SecurityTokenDescriptor
-      {
-         Subject = new ClaimsIdentity(claims),
-         Expires = DateTime.Now.AddDays(1),
-         SigningCredentials = credentials,
-         Issuer = _configuration["Jwt:Issuer"],
-         Audience = _configuration["Jwt:Audience"]
-      };
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.Now.AddDays(1),
+            SigningCredentials = credentials,
+            Issuer = _configuration["Jwt:Issuer"],
+            Audience = _configuration["Jwt:Audience"]
+        };
 
-      var tokenHandler = new JwtSecurityTokenHandler();
-      var token = tokenHandler.CreateToken(tokenDescriptor);
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var token = tokenHandler.CreateToken(tokenDescriptor);
 
-      return tokenHandler.WriteToken(token);
-   }
+        return tokenHandler.WriteToken(token);
+    }
 }

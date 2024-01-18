@@ -49,7 +49,7 @@ public class EstudianteRepositoryTest
 
         return databaseCotext;
     }
-    
+
     [Fact]
     public async void EstudianteExists_ReturnTrue()
     {
@@ -61,7 +61,7 @@ public class EstudianteRepositoryTest
 
         result.Should().BeTrue();
     }
-    
+
     [Fact]
     public async void EstudianteExists_ReturnFalse()
     {
@@ -73,7 +73,7 @@ public class EstudianteRepositoryTest
 
         result.Should().BeFalse();
     }
-    
+
     [Fact]
     public async void GetById_ReturnEstudiante()
     {
@@ -86,9 +86,9 @@ public class EstudianteRepositoryTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(Estudiante));
     }
-    
-    
-    
+
+
+
     [Fact]
     public async void GetById_ReturnNull()
     {
@@ -100,7 +100,7 @@ public class EstudianteRepositoryTest
 
         result.Should().BeNull();
     }
-    
+
     [Fact]
     public async void GetAllWithUsers_ReturnEstudiantes()
     {
@@ -114,7 +114,7 @@ public class EstudianteRepositoryTest
             es.Usuario.Should().NotBeNull();
         }
     }
-    
+
     [Fact]
     public async void GetByUsuarios_ReturnEstudiantes()
     {
@@ -142,7 +142,7 @@ public class EstudianteRepositoryTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(Estudiante));
     }
-    
+
     [Fact]
     public async void GetByUsuario_ReturnNull()
     {

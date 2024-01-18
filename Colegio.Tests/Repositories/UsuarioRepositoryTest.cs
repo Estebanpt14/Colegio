@@ -53,7 +53,7 @@ public class UsuarioRepositoryTest
 
         return databaseCotext;
     }
-    
+
     [Fact]
     public void UsuarioExists_ReturnTrue()
     {
@@ -64,7 +64,7 @@ public class UsuarioRepositoryTest
 
         result.Should().BeTrue();
     }
-    
+
     [Fact]
     public void UsuarioExists_ReturnFalse()
     {
@@ -75,7 +75,7 @@ public class UsuarioRepositoryTest
 
         result.Should().BeFalse();
     }
-    
+
     [Fact]
     public void UsuarioExistsByUsername_ReturnTrue()
     {
@@ -86,7 +86,7 @@ public class UsuarioRepositoryTest
 
         result.Should().BeTrue();
     }
-    
+
     [Fact]
     public void UsuarioExistsByUsername_ReturnFalse()
     {
@@ -110,7 +110,7 @@ public class UsuarioRepositoryTest
         result.Should().NotBeNull();
         result.Should().BeOfType(typeof(Usuario));
     }
-    
+
     [Fact]
     public void GetUsuarioByUsernamePassword_ReturnNull()
     {

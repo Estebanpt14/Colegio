@@ -10,7 +10,7 @@ public class Encryptor
     private static byte[] SecretKey = Encoding.UTF8.GetBytes("Mqw1232ajskdahskdja223".PadRight(32));
     private static readonly int KeySize = 256;
     private static readonly int BlockSize = 128;
-    
+
     public static string Encrypt(string plainText)
     {
         using (Aes aesAlg = Aes.Create())
