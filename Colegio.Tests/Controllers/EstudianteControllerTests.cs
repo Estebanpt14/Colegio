@@ -3,10 +3,8 @@ using Colegio.Controllers;
 using Colegio.Dto;
 using Colegio.Models;
 using Colegio.Repositories.IRepositories;
-using Colegio.Utilities.Constants;
+using Colegio.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Serilog;
 
 namespace Tests.Controllers;
 
@@ -15,11 +13,7 @@ public class EstudianteControllerTests
     private readonly IEstudianteRepository _estudianteRepository = A.Fake<IEstudianteRepository>();
     private readonly IMapper _mapper = A.Fake<IMapper>();
     private readonly IUsuarioRepository _usuarioRepository = A.Fake<IUsuarioRepository>();
-
-    public EstudianteControllerTests()
-    {
-
-    }
+    private readonly IEmailService _emailService = A.Fake<EmailService>();
 
     [Fact]
     public void GetEstudiantes_ReturnOk()
@@ -29,7 +23,7 @@ public class EstudianteControllerTests
         var listEstudiantesDto = A.Fake<List<EstudianteDto>>();
         A.CallTo(() => _estudianteRepository.GetAll()).Returns(listEstudiantes);
         A.CallTo(() => _mapper.Map<List<EstudianteDto>>(estudiantes)).Returns(listEstudiantesDto);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.GetEstudiantes();
 
@@ -47,7 +41,7 @@ public class EstudianteControllerTests
         A.CallTo(() => _estudianteRepository.EstudianteExists(id)).Returns(estudianteExists);
         A.CallTo(() => _estudianteRepository.GetById(id)).Returns(estudiante);
         A.CallTo(() => _mapper.Map<EstudianteDto>(estudiante)).Returns(estudianteDto);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.GetEstudiante(id);
 
@@ -65,7 +59,7 @@ public class EstudianteControllerTests
         A.CallTo(() => _estudianteRepository.EstudianteExists(id)).Returns(estudianteExists);
         A.CallTo(() => _estudianteRepository.GetById(id)).Returns(estudiante);
         A.CallTo(() => _mapper.Map<EstudianteDto>(estudiante)).Returns(estudianteDto);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.GetEstudiante(id);
 
@@ -78,8 +72,11 @@ public class EstudianteControllerTests
     {
         var rolDto = A.Fake<RolDto>();
         var usuarioExists = true;
+        var estudianteExists = false;
+        var id = "1234";
         A.CallTo(() => _usuarioRepository.UsuarioExists(rolDto.NumeroDocumento)).Returns(usuarioExists);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        A.CallTo(() => _estudianteRepository.ExistsByUsuario(id)).Returns(estudianteExists);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.CreateEstudiante(rolDto);
 
@@ -93,7 +90,7 @@ public class EstudianteControllerTests
         var rolDto = A.Fake<RolDto>();
         var usuarioExists = false;
         A.CallTo(() => _usuarioRepository.UsuarioExists(rolDto.NumeroDocumento)).Returns(usuarioExists);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.CreateEstudiante(rolDto);
 
@@ -114,7 +111,7 @@ public class EstudianteControllerTests
         A.CallTo(() => _usuarioRepository.GetUsuarioByUsernamePassword(
             loginDto.UserName, loginDto.Password)).Returns(usuario);
         A.CallTo(() => _usuarioRepository.Update(usuario)).Returns(updated);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.ChangePassword(loginDto, id, newPass);
 
@@ -135,7 +132,7 @@ public class EstudianteControllerTests
         A.CallTo(() => _usuarioRepository.GetUsuarioByUsernamePassword(
             loginDto.UserName, loginDto.Password)).Returns(usuario);
         A.CallTo(() => _usuarioRepository.Update(usuario)).Returns(updated);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.ChangePassword(loginDto, id, newPass);
 
@@ -154,7 +151,7 @@ public class EstudianteControllerTests
             loginDto.UserName, loginDto.Password)).Returns(usuario);
         A.CallTo(() => _estudianteRepository.GetByUsuario(usuario.Id)).Returns(estudiante);
         A.CallTo(() => _mapper.Map<EstudianteDto>(estudiante)).Returns(estudianteDto);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.GetEstudianteByUsuario(loginDto);
 
@@ -173,7 +170,7 @@ public class EstudianteControllerTests
             loginDto.UserName, loginDto.Password)).Returns(null);
         A.CallTo(() => _estudianteRepository.GetByUsuario(usuario.Id)).Returns(estudiante);
         A.CallTo(() => _mapper.Map<EstudianteDto>(estudiante)).Returns(estudianteDto);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.GetEstudianteByUsuario(loginDto);
 
@@ -192,7 +189,7 @@ public class EstudianteControllerTests
             loginDto.UserName, loginDto.Password)).Returns(usuario);
         A.CallTo(() => _estudianteRepository.GetByUsuario(usuario.Id)).Returns(null);
         A.CallTo(() => _mapper.Map<EstudianteDto>(estudiante)).Returns(estudianteDto);
-        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository);
+        var controller = new EstudianteController(_estudianteRepository, _mapper, _usuarioRepository, _emailService);
 
         var result = controller.GetEstudianteByUsuario(loginDto);
 

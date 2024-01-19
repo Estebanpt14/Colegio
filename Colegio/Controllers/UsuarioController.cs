@@ -61,8 +61,6 @@ public class UsuarioController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult Login(UsuarioLoginDto usuarioDto)
     {
-        usuarioDto.Password = Encryptor.Encrypt(usuarioDto.Password);
-
         if (!_usuarioRepository.UsuarioExistsByUsername(usuarioDto.UserName))
         {
             Log.Write(LogEventLevel.Warning, "Usuario {@result} no encontrado",
@@ -78,7 +76,7 @@ public class UsuarioController : ControllerBase
         {
             Log.Write(LogEventLevel.Warning, "Usuario {@result} no encontrado",
                usuarioDto.UserName);
-            return NotFound("User not found");
+            return NotFound("User not found1");
         }
 
         if (!ModelState.IsValid)

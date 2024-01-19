@@ -1,0 +1,606 @@
+2024-01-18 14:59:48.671 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 14:59:48.911 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 14:59:48.923 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 14:59:48.925 -05:00 [INF] Hosting environment: Development
+2024-01-18 14:59:48.926 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 14:59:55.523 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 14:59:55.867 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 347.6638ms
+2024-01-18 14:59:55.990 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-bundle.js - -
+2024-01-18 14:59:55.990 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-standalone-preset.js - -
+2024-01-18 14:59:56.002 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui.css - -
+2024-01-18 14:59:56.149 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-01-18 14:59:56.150 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-01-18 14:59:56.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui.css - - - 200 144929 text/css 148.6980ms
+2024-01-18 14:59:56.175 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-01-18 14:59:56.177 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 187.0426ms
+2024-01-18 14:59:56.178 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 187.8778ms
+2024-01-18 14:59:57.147 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 14:59:57.661 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 513.8901ms
+2024-01-18 20:45:07.160 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 20:45:07.447 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 20:45:07.451 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 20:45:07.453 -05:00 [INF] Hosting environment: Development
+2024-01-18 20:45:07.454 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 20:45:08.722 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger - -
+2024-01-18 20:45:08.805 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger - - - 301 0 - 87.8462ms
+2024-01-18 20:45:08.837 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 20:45:08.993 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 155.9337ms
+2024-01-18 20:45:09.102 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui.css - -
+2024-01-18 20:45:09.109 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-bundle.js - -
+2024-01-18 20:45:09.117 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-standalone-preset.js - -
+2024-01-18 20:45:09.179 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-01-18 20:45:09.179 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-01-18 20:45:09.181 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-01-18 20:45:09.188 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 79.0194ms
+2024-01-18 20:45:09.189 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 72.5734ms
+2024-01-18 20:45:09.193 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui.css - - - 200 144929 text/css 90.7053ms
+2024-01-18 20:45:09.524 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - -
+2024-01-18 20:45:09.524 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-01-18 20:45:09.525 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - - - 200 665 image/png 1.5232ms
+2024-01-18 20:45:09.683 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 20:45:10.084 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 401.5182ms
+2024-01-18 20:45:14.416 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 20:45:14.424 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 20:45:14.555 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 20:45:14.570 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 20:45:18.703 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 20:45:19.900 -05:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 20:45:20.279 -05:00 [INF] Estudiantes Consultados
+2024-01-18 20:45:23.027 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4283.104ms.
+2024-01-18 20:45:23.057 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Colegio.Dto.EstudianteDto, Colegio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-18 20:45:23.106 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) in 8525.8617ms
+2024-01-18 20:45:23.107 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 20:45:23.112 -05:00 [INF] HTTP GET /estudiante responded 200 in 8556.1684 ms
+2024-01-18 20:45:23.143 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/estudiante - - - 200 - application/json;+charset=utf-8 8726.2498ms
+2024-01-18 20:46:17.116 -05:00 [INF] Application is shutting down...
+2024-01-18 20:58:47.506 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 20:58:47.780 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 20:58:47.783 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 20:58:47.784 -05:00 [INF] Hosting environment: Development
+2024-01-18 20:58:47.784 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 20:58:48.919 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger - -
+2024-01-18 20:58:48.930 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 20:58:49.023 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger - - - 0 - - 110.0399ms
+2024-01-18 20:58:49.193 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 262.8378ms
+2024-01-18 20:58:49.350 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui.css - -
+2024-01-18 20:58:49.377 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-01-18 20:58:49.379 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/swagger-ui.css - - - 0 144929 text/css 28.8053ms
+2024-01-18 20:58:49.783 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - -
+2024-01-18 20:58:49.788 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-01-18 20:58:49.790 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - - - 200 665 image/png 6.7855ms
+2024-01-18 20:58:50.096 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 20:58:50.396 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 300.3543ms
+2024-01-18 20:58:54.828 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 20:58:54.833 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 20:58:54.949 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 20:58:54.961 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 20:58:58.192 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 20:58:59.321 -05:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 20:58:59.703 -05:00 [INF] Estudiantes Consultados
+2024-01-18 20:59:01.806 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3588.1886ms.
+2024-01-18 20:59:01.822 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Colegio.Dto.EstudianteDto, Colegio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-18 20:59:01.859 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) in 6889.414ms
+2024-01-18 20:59:01.859 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 20:59:01.863 -05:00 [INF] HTTP GET /estudiante responded 200 in 6917.0221 ms
+2024-01-18 20:59:01.885 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/estudiante - - - 200 - application/json;+charset=utf-8 7056.8934ms
+2024-01-18 21:00:32.373 -05:00 [INF] Application is shutting down...
+2024-01-18 21:00:37.569 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:00:37.756 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:00:37.760 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:00:37.761 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:00:37.762 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:00:38.645 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:00:38.841 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 199.1222ms
+2024-01-18 21:00:39.273 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - -
+2024-01-18 21:00:39.297 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-01-18 21:00:39.299 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - - - 0 665 image/png 25.3730ms
+2024-01-18 21:00:39.470 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:00:39.821 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 350.9306ms
+2024-01-18 21:00:41.814 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 21:00:41.821 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:00:41.934 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:00:41.948 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:00:45.586 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 21:00:46.722 -05:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 21:00:47.047 -05:00 [INF] Estudiantes Consultados
+2024-01-18 21:00:49.152 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3529.9255ms.
+2024-01-18 21:00:49.194 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Colegio.Dto.EstudianteDto, Colegio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-18 21:00:49.243 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) in 7284.816ms
+2024-01-18 21:00:49.244 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:00:49.247 -05:00 [INF] HTTP GET /estudiante responded 200 in 7314.4113 ms
+2024-01-18 21:00:49.281 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/estudiante - - - 200 - application/json;+charset=utf-8 7467.2940ms
+2024-01-18 21:02:12.120 -05:00 [INF] Application is shutting down...
+2024-01-18 21:09:54.142 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:09:54.453 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:09:54.456 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:09:54.457 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:09:54.457 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:09:55.236 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:09:55.453 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 219.9380ms
+2024-01-18 21:09:55.882 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - -
+2024-01-18 21:09:55.904 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-01-18 21:09:55.905 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - - - 0 665 image/png 23.4917ms
+2024-01-18 21:09:56.088 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:09:56.380 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 291.7814ms
+2024-01-18 21:09:58.179 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 21:09:58.185 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:09:58.308 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:09:58.323 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:10:02.074 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 21:10:03.414 -05:00 [INF] Executed DbCommand (105ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 21:10:03.935 -05:00 [INF] Estudiantes Consultados
+2024-01-18 21:10:06.571 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4477.2031ms.
+2024-01-18 21:10:06.587 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Colegio.Dto.EstudianteDto, Colegio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-18 21:10:06.639 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) in 8304.7656ms
+2024-01-18 21:10:06.641 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:10:06.646 -05:00 [INF] HTTP GET /estudiante responded 200 in 8339.9680 ms
+2024-01-18 21:10:06.675 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/estudiante - - - 200 - application/json;+charset=utf-8 8496.2693ms
+2024-01-18 21:10:39.812 -05:00 [INF] Application is shutting down...
+2024-01-18 21:13:45.805 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:13:46.242 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:13:46.253 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:13:46.254 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:13:46.254 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:13:48.175 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:13:48.618 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 446.1812ms
+2024-01-18 21:13:49.278 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - -
+2024-01-18 21:13:49.356 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-01-18 21:13:49.369 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/favicon-16x16.png - - - 0 665 image/png 90.5008ms
+2024-01-18 21:13:49.704 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:13:50.169 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 465.2869ms
+2024-01-18 21:13:54.024 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 21:13:54.030 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:13:54.294 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:13:54.320 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:13:59.181 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 21:14:01.285 -05:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 21:14:01.983 -05:00 [INF] Estudiantes Consultados
+2024-01-18 21:15:46.770 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:15:47.080 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:15:47.083 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:15:47.083 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:15:47.084 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:16:22.339 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:16:22.465 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:16:22.876 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:16:22.912 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:16:27.458 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:16:28.792 -05:00 [INF] Executed DbCommand (117ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:16:28.985 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:16:28.990 -05:00 [WRN] Usuario string no encontrado
+2024-01-18 21:16:29.008 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 1532.9651ms.
+2024-01-18 21:16:29.033 -05:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-01-18 21:16:29.053 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 6127.3342ms
+2024-01-18 21:16:29.053 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:16:29.062 -05:00 [INF] HTTP POST /auth/login responded 404 in 6186.8278 ms
+2024-01-18 21:16:29.103 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 404 - text/plain;+charset=utf-8 6769.8506ms
+2024-01-18 21:16:45.031 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 51
+2024-01-18 21:16:45.044 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:16:45.047 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:16:45.123 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:16:45.133 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:16:45.137 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:16:45.139 -05:00 [WRN] Usuario string no encontrado
+2024-01-18 21:16:45.140 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 15.2677ms.
+2024-01-18 21:16:45.142 -05:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-01-18 21:16:45.145 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 97.249ms
+2024-01-18 21:16:45.146 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:16:45.146 -05:00 [INF] HTTP POST /auth/login responded 404 in 102.0079 ms
+2024-01-18 21:16:45.149 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 51 - 404 - text/plain;+charset=utf-8 117.7869ms
+2024-01-18 21:18:27.575 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/auth/register application/json 50
+2024-01-18 21:18:27.622 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-01-18 21:18:27.623 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-01-18 21:18:27.624 -05:00 [INF] HTTP GET /auth/register responded 405 in 1.7108 ms
+2024-01-18 21:18:27.624 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/auth/register application/json 50 - 405 0 - 48.8385ms
+2024-01-18 21:18:59.948 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/auth/register application/json 264
+2024-01-18 21:18:59.950 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-01-18 21:18:59.951 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-01-18 21:18:59.951 -05:00 [INF] HTTP GET /auth/register responded 405 in 1.2835 ms
+2024-01-18 21:18:59.953 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/auth/register application/json 264 - 405 0 - 3.9275ms
+2024-01-18 21:19:17.838 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/register application/json 264
+2024-01-18 21:19:17.839 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Register (Colegio)'
+2024-01-18 21:19:17.845 -05:00 [INF] Route matched with {action = "Register", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(Colegio.Dto.UsuarioDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:19:17.950 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Register (Colegio) - Validation state: "Valid"
+2024-01-18 21:19:25.277 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."NumeroDocumento" = @__numeroDocumento_0)
+2024-01-18 21:19:25.280 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:19:26.113 -05:00 [INF] Executed DbCommand (63ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = Date), @p8='?', @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTime), @p11='?', @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Boolean), @p17='?', @p18='?' (DbType = Boolean), @p19='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("NumeroDocumento", "AccessFailedCount", "ConcurrencyStamp", "DireccionResidencia", "Edad", "Email", "EmailConfirmed", "FechaNacimiento", "GrupoSanguineo", "LockoutEnabled", "LockoutEnd", "Nombre", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2024-01-18 21:19:26.197 -05:00 [INF] Usuario string creado
+2024-01-18 21:19:26.203 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Register (Colegio), returned result Microsoft.AspNetCore.Mvc.OkResult in 8252.8466ms.
+2024-01-18 21:19:26.229 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-18 21:19:26.236 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Register (Colegio) in 8389.9549ms
+2024-01-18 21:19:26.239 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Register (Colegio)'
+2024-01-18 21:19:26.241 -05:00 [INF] HTTP POST /auth/register responded 200 in 8402.3484 ms
+2024-01-18 21:19:26.275 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/register application/json 264 - 200 0 - 8436.9041ms
+2024-01-18 21:19:38.997 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:19:38.998 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:19:39.003 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:19:39.018 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:19:39.024 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:19:39.040 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:19:39.041 -05:00 [WRN] Usuario string no encontrado
+2024-01-18 21:19:39.041 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 20.2541ms.
+2024-01-18 21:19:39.043 -05:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-01-18 21:19:39.045 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 34.668ms
+2024-01-18 21:19:39.047 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:19:39.050 -05:00 [INF] HTTP POST /auth/login responded 404 in 51.8332 ms
+2024-01-18 21:19:39.051 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 404 - text/plain;+charset=utf-8 54.1640ms
+2024-01-18 21:19:52.060 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:19:52.061 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:19:52.061 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:19:52.063 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:19:52.067 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:19:52.072 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:19:52.073 -05:00 [WRN] Usuario string no encontrado
+2024-01-18 21:19:52.073 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 7.8234ms.
+2024-01-18 21:19:52.076 -05:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-01-18 21:19:52.076 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 14.6218ms
+2024-01-18 21:19:52.078 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:19:52.078 -05:00 [INF] HTTP POST /auth/login responded 404 in 17.2935 ms
+2024-01-18 21:19:52.079 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 404 - text/plain;+charset=utf-8 18.8890ms
+2024-01-18 21:20:24.792 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:20:25.082 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:20:25.084 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:20:25.085 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:20:25.085 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:20:25.926 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:20:26.146 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 224.9883ms
+2024-01-18 21:20:26.810 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:20:27.132 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 322.2346ms
+2024-01-18 21:20:28.916 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:20:28.921 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:20:29.021 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:20:29.051 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:20:32.180 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:20:33.127 -05:00 [INF] Executed DbCommand (76ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:20:33.267 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:20:33.272 -05:00 [WRN] Usuario string no encontrado
+2024-01-18 21:20:33.284 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 1091.7953ms.
+2024-01-18 21:20:33.297 -05:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-01-18 21:20:33.308 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 4246.6822ms
+2024-01-18 21:20:33.308 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:20:33.312 -05:00 [INF] HTTP POST /auth/login responded 404 in 4293.6144 ms
+2024-01-18 21:20:33.334 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 404 - text/plain;+charset=utf-8 4418.4357ms
+2024-01-18 21:21:28.748 -05:00 [INF] Application is shutting down...
+2024-01-18 21:21:36.543 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:21:36.741 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:21:36.745 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:21:36.746 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:21:36.747 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:21:37.636 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:21:37.894 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 259.9097ms
+2024-01-18 21:21:38.500 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:21:38.859 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 359.0020ms
+2024-01-18 21:21:40.719 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:21:40.728 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:21:40.855 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:21:40.884 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:21:44.747 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:21:45.731 -05:00 [INF] Executed DbCommand (82ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:21:45.876 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:21:45.881 -05:00 [WRN] Usuario string no encontrado
+2024-01-18 21:21:45.898 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 1126.7248ms.
+2024-01-18 21:21:45.914 -05:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-01-18 21:21:45.924 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 5027.326ms
+2024-01-18 21:21:45.925 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:21:45.932 -05:00 [INF] HTTP POST /auth/login responded 404 in 5077.0400 ms
+2024-01-18 21:21:45.957 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 404 - text/plain;+charset=utf-8 5237.8457ms
+2024-01-18 21:22:11.075 -05:00 [INF] Application is shutting down...
+2024-01-18 21:22:22.948 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:22:23.342 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:22:23.345 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:22:23.347 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:22:23.347 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:22:28.431 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:22:28.492 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:22:28.714 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:22:28.757 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:22:32.666 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:24:20.162 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:24:20.368 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:24:20.372 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:24:20.373 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:24:20.373 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:24:21.165 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:24:21.360 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 197.3736ms
+2024-01-18 21:24:21.869 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:24:22.190 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 320.9209ms
+2024-01-18 21:24:24.255 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:24:24.263 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:24:24.378 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:24:24.402 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:24:27.569 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:24:28.581 -05:00 [INF] Executed DbCommand (78ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:24:28.728 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:24:29.114 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2024-01-18 21:24:29.197 -05:00 [WRN] Usuario string ha iniciado sesion
+2024-01-18 21:24:29.211 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1626.2374ms.
+2024-01-18 21:24:29.225 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-18 21:24:29.233 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 4823.4524ms
+2024-01-18 21:24:29.234 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:24:29.238 -05:00 [INF] HTTP POST /auth/login responded 200 in 4862.2804 ms
+2024-01-18 21:24:29.257 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 200 - text/plain;+charset=utf-8 5001.6569ms
+2024-01-18 21:24:41.471 -05:00 [INF] Application is shutting down...
+2024-01-18 21:24:52.401 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:24:52.721 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:24:52.725 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:24:52.725 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:24:52.725 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:25:10.860 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 21:25:10.941 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:25:11.305 -05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Estudiante)
+2024-01-18 21:25:11.313 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-01-18 21:25:11.320 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/estudiante - - - 403 0 - 465.7976ms
+2024-01-18 21:25:37.353 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/create application/json 33
+2024-01-18 21:25:37.372 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio)'
+2024-01-18 21:25:37.405 -05:00 [INF] Route matched with {action = "CreateEstudiante", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateEstudiante(Colegio.Dto.RolDto) on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:25:41.383 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio) - Validation state: "Valid"
+2024-01-18 21:25:42.752 -05:00 [INF] Executed DbCommand (110ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."NumeroDocumento" = @__numeroDocumento_0)
+2024-01-18 21:25:42.940 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__rolDto_NumeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NumeroDocumento" = @__rolDto_NumeroDocumento_0
+LIMIT 1
+2024-01-18 21:25:43.232 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+WHERE e."UsuarioId" = @__numeroDocumento_0
+LIMIT 1
+2024-01-18 21:25:43.235 -05:00 [WRN] El estudiante string ya existe
+2024-01-18 21:25:43.252 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio), returned result Microsoft.AspNetCore.Mvc.ConflictObjectResult in 1850.9499ms.
+2024-01-18 21:25:43.269 -05:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2024-01-18 21:25:43.283 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio) in 5867.3127ms
+2024-01-18 21:25:43.283 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio)'
+2024-01-18 21:25:43.289 -05:00 [INF] HTTP POST /create responded 409 in 5919.4880 ms
+2024-01-18 21:25:43.321 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/create application/json 33 - 409 - text/plain;+charset=utf-8 5968.4162ms
+2024-01-18 21:26:43.064 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:26:43.253 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:26:43.255 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:26:43.256 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:26:43.256 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:26:44.162 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:26:44.348 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 188.8147ms
+2024-01-18 21:26:44.807 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:26:45.102 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 295.2038ms
+2024-01-18 21:26:52.222 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/create application/json 33
+2024-01-18 21:26:52.231 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:26:52.336 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio)'
+2024-01-18 21:26:52.362 -05:00 [INF] Route matched with {action = "CreateEstudiante", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateEstudiante(Colegio.Dto.RolDto) on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:26:55.515 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio) - Validation state: "Valid"
+2024-01-18 21:26:56.585 -05:00 [INF] Executed DbCommand (79ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."NumeroDocumento" = @__numeroDocumento_0)
+2024-01-18 21:26:56.732 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__rolDto_NumeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NumeroDocumento" = @__rolDto_NumeroDocumento_0
+LIMIT 1
+2024-01-18 21:26:57.002 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+WHERE e."UsuarioId" = @__numeroDocumento_0
+LIMIT 1
+2024-01-18 21:26:57.006 -05:00 [WRN] El estudiante string ya existe
+2024-01-18 21:26:57.019 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio), returned result Microsoft.AspNetCore.Mvc.ConflictObjectResult in 1487.4154ms.
+2024-01-18 21:26:57.032 -05:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2024-01-18 21:26:57.042 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio) in 4669.9241ms
+2024-01-18 21:26:57.042 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio)'
+2024-01-18 21:26:57.046 -05:00 [INF] HTTP POST /create responded 409 in 4710.3966 ms
+2024-01-18 21:26:57.068 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/create application/json 33 - 409 - text/plain;+charset=utf-8 4846.4610ms
+2024-01-18 21:27:58.405 -05:00 [INF] Application is shutting down...
+2024-01-18 21:28:04.010 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:28:04.233 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:28:04.237 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:28:04.237 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:28:04.238 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:28:04.943 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/index.html - -
+2024-01-18 21:28:05.141 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/index.html - - - 200 - text/html;charset=utf-8 205.7019ms
+2024-01-18 21:28:05.689 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - -
+2024-01-18 21:28:05.985 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5218/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 296.5819ms
+2024-01-18 21:28:08.176 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/create application/json 33
+2024-01-18 21:28:08.185 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:28:08.287 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio)'
+2024-01-18 21:28:08.314 -05:00 [INF] Route matched with {action = "CreateEstudiante", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateEstudiante(Colegio.Dto.RolDto) on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:28:11.870 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio) - Validation state: "Valid"
+2024-01-18 21:28:12.865 -05:00 [INF] Executed DbCommand (78ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."NumeroDocumento" = @__numeroDocumento_0)
+2024-01-18 21:28:13.000 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__rolDto_NumeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NumeroDocumento" = @__rolDto_NumeroDocumento_0
+LIMIT 1
+2024-01-18 21:28:13.266 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__numeroDocumento_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+WHERE e."UsuarioId" = @__numeroDocumento_0
+LIMIT 1
+2024-01-18 21:28:13.342 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Discriminator", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2024-01-18 21:28:13.445 -05:00 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2024-01-18 21:28:13.474 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Discriminator", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2024-01-18 21:28:13.572 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-01-18 21:28:13.814 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?', @p1='?', @p21='?', @p2='?' (DbType = Int32), @p3='?', @p22='?', @p4='?', @p5='?' (DbType = Int32), @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Date), @p9='?', @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?', @p17='?' (DbType = Boolean), @p18='?', @p19='?' (DbType = Boolean), @p20='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p0, @p1);
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p2, "ConcurrencyStamp" = @p3, "DireccionResidencia" = @p4, "Edad" = @p5, "Email" = @p6, "EmailConfirmed" = @p7, "FechaNacimiento" = @p8, "GrupoSanguineo" = @p9, "LockoutEnabled" = @p10, "LockoutEnd" = @p11, "Nombre" = @p12, "NormalizedEmail" = @p13, "NormalizedUserName" = @p14, "PasswordHash" = @p15, "PhoneNumber" = @p16, "PhoneNumberConfirmed" = @p17, "SecurityStamp" = @p18, "TwoFactorEnabled" = @p19, "UserName" = @p20
+WHERE "NumeroDocumento" = @p21 AND "ConcurrencyStamp" = @p22;
+2024-01-18 21:28:14.007 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?', @p1='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Estudiantes" ("CursoCodigo", "UsuarioId")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-01-18 21:28:14.043 -05:00 [INF] Estudiante Creado: {"Id":4,"UsuarioId":"string","CursoCodigo":null,"Curso":null,"NotasEstudiantes":null,"Usuario":{"Id":"string","Nombre":"string","Edad":0,"GrupoSanguineo":"string","DireccionResidencia":"string","FechaNacimiento":"2024-01-19","UserName":"string","NormalizedUserName":"STRING","Email":"string","NormalizedEmail":"STRING","EmailConfirmed":false,"PasswordHash":"I9SpPLFxvwfgHWScH+Qvdg==","SecurityStamp":"460ac36d-0310-421d-9b61-0b8d8417aedd","ConcurrencyStamp":"ffee8d0b-5ee6-46d3-be2b-37e51778658d","PhoneNumber":"string","PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":false,"AccessFailedCount":0,"$type":"Usuario"},"$type":"Estudiante"}
+2024-01-18 21:28:14.077 -05:00 [INF] Executed action method Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2188.8858ms.
+2024-01-18 21:28:14.093 -05:00 [INF] Executing OkObjectResult, writing value of type 'Colegio.Models.Estudiante'.
+2024-01-18 21:28:14.167 -05:00 [INF] Executed action Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio) in 5845.4648ms
+2024-01-18 21:28:14.167 -05:00 [INF] Executed endpoint 'Colegio.Controllers.EstudianteController.CreateEstudiante (Colegio)'
+2024-01-18 21:28:14.171 -05:00 [INF] HTTP POST /create responded 200 in 5884.8507 ms
+2024-01-18 21:28:14.191 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/create application/json 33 - 200 - application/json;+charset=utf-8 6015.2629ms
+2024-01-18 21:28:27.809 -05:00 [INF] Application is shutting down...
+2024-01-18 21:28:43.883 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:28:44.264 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:28:44.267 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:28:44.268 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:28:44.268 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:28:55.281 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5218/auth/login application/json 50
+2024-01-18 21:28:55.351 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:28:55.581 -05:00 [INF] Executing endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:28:55.611 -05:00 [INF] Route matched with {action = "Login", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Colegio.Dto.UsuarioLoginDto) on controller Colegio.Controllers.UsuarioController (Colegio).
+2024-01-18 21:28:59.852 -05:00 [INF] Executing action method Colegio.Controllers.UsuarioController.Login (Colegio) - Validation state: "Valid"
+2024-01-18 21:29:01.170 -05:00 [INF] Executed DbCommand (111ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AspNetUsers" AS a
+    WHERE a."UserName" = @__username_0)
+2024-01-18 21:29:01.378 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__username_0='?', @__Encrypt_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."UserName" = @__username_0 AND a."PasswordHash" = @__Encrypt_1
+LIMIT 1
+2024-01-18 21:29:05.729 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2024-01-18 21:29:05.916 -05:00 [WRN] Usuario string ha iniciado sesion
+2024-01-18 21:29:05.935 -05:00 [INF] Executed action method Colegio.Controllers.UsuarioController.Login (Colegio), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6064.1173ms.
+2024-01-18 21:29:05.956 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-18 21:29:05.974 -05:00 [INF] Executed action Colegio.Controllers.UsuarioController.Login (Colegio) in 10350.357ms
+2024-01-18 21:29:05.975 -05:00 [INF] Executed endpoint 'Colegio.Controllers.UsuarioController.Login (Colegio)'
+2024-01-18 21:29:05.981 -05:00 [INF] HTTP POST /auth/login responded 200 in 10400.5039 ms
+2024-01-18 21:29:06.028 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5218/auth/login application/json 50 - 200 - text/plain;+charset=utf-8 10752.1545ms
+2024-01-18 21:29:20.471 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 21:29:20.594 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:29:20.597 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:29:20.660 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 21:29:20.726 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 21:29:20.846 -05:00 [INF] Estudiantes Consultados
+2024-01-18 21:30:21.688 -05:00 [INF] User profile is available. Using '/home/est14/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-18 21:30:22.045 -05:00 [INF] Now listening on: http://localhost:5218
+2024-01-18 21:30:22.048 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 21:30:22.049 -05:00 [INF] Hosting environment: Development
+2024-01-18 21:30:22.049 -05:00 [INF] Content root path: /home/est14/Documents/Proyects/Colegio/Colegio
+2024-01-18 21:30:33.942 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5218/estudiante - -
+2024-01-18 21:30:34.014 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-01-18 21:30:34.477 -05:00 [INF] Executing endpoint 'Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio)'
+2024-01-18 21:30:34.491 -05:00 [INF] Route matched with {action = "GetEstudiantes", controller = "Estudiante"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEstudiantes() on controller Colegio.Controllers.EstudianteController (Colegio).
+2024-01-18 21:30:38.568 -05:00 [INF] Executing action method Colegio.Controllers.EstudianteController.GetEstudiantes (Colegio) - Validation state: "Valid"
+2024-01-18 21:30:40.451 -05:00 [INF] Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."CursoCodigo", e."UsuarioId", a."NumeroDocumento", a."AccessFailedCount", a."ConcurrencyStamp", a."DireccionResidencia", a."Edad", a."Email", a."EmailConfirmed", a."FechaNacimiento", a."GrupoSanguineo", a."LockoutEnabled", a."LockoutEnd", a."Nombre", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "Estudiantes" AS e
+INNER JOIN "AspNetUsers" AS a ON e."UsuarioId" = a."NumeroDocumento"
+2024-01-18 21:30:40.880 -05:00 [INF] Estudiantes Consultados

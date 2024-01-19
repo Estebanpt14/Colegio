@@ -52,4 +52,10 @@ public class EstudianteRepository : Repository<Estudiante>, IEstudianteRepositor
         return _dataContext.Estudiantes
             .FirstOrDefault(e => e.Usuario != null && e.UsuarioId == numeroDocumento);
     }
+
+    public bool ExistsByUsuario(string numeroDocumento)
+    {
+        return _dataContext.Estudiantes
+            .Any(e => e.Usuario != null && e.UsuarioId == numeroDocumento);
+    }
 }

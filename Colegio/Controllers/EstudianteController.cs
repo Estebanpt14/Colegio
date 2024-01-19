@@ -2,6 +2,7 @@ using AutoMapper;
 using Colegio.Dto;
 using Colegio.Models;
 using Colegio.Repositories.IRepositories;
+using Colegio.Services;
 using Colegio.Utilities;
 using Colegio.Utilities.Constants;
 using Microsoft.AspNetCore.Authorization;
@@ -18,12 +19,14 @@ public class EstudianteController : Controller
     private readonly IEstudianteRepository _estudianteRepository;
     private readonly IUsuarioRepository _usuarioRepository;
     private readonly IMapper _mapper;
+    private readonly IEmailService _emailService;
 
     public EstudianteController(IEstudianteRepository estudianteRepository, IMapper mapper,
-            IUsuarioRepository usuarioRepository)
+            IUsuarioRepository usuarioRepository, IEmailService emailService)
     {
         this._estudianteRepository = estudianteRepository;
         this._mapper = mapper;
+        this._emailService = emailService;
         this._usuarioRepository = usuarioRepository;
     }
 
@@ -40,6 +43,7 @@ public class EstudianteController : Controller
             return BadRequest(ModelState);
 
         Log.Write(LogEventLevel.Information, "Estudiantes Consultados");
+        //var userName = HttpContext.User.Identity?.Name;
 
         return Ok(estudiantesDto);
     }
@@ -80,9 +84,8 @@ public class EstudianteController : Controller
         }
 
         var usuario = _usuarioRepository.Get(e => e.Id.Equals(rolDto.NumeroDocumento));
-
-        var val = _estudianteRepository.GetByUsuario(usuario.Id);
-        if (val == null)
+        
+        if (_estudianteRepository.ExistsByUsuario(usuario.Id))
         {
             Log.Write(LogEventLevel.Warning,
                 "El estudiante {@result} ya existe",

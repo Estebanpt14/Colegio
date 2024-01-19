@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTIFICACIONES COLEGIO</title>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #053F5C;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #F27F0C;
+            color: #053F5C;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .email-container {
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        hr {
+            border: 1px solid #053F5C;
+            margin: 20px 0;
+            grid-column: span 2; /* El hr ocupa dos columnas en la cuadrícula */
+        }
+
+        .email-content {
+            text-align: center;
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        /* Estilos para pantallas pequeñas (móviles) */
+        @media screen and (max-width: 480px) {
+            .email-container {
+                padding: 10px;
+            }
+
+            .email-content {
+                width: 100%;
+                font-size: 14px; /* Ajusta el tamaño del texto según sea necesario */
+            }
+        }
+    </style>
+
+    <!-- Agrega la fuente Montserrat desde Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+
+<div class="header">
+    <h1>NOTIFICACIONES COLEGIO</h1>
+</div>
+
+<div class="email-container">
+    <h2>{ASUNTO_DEL_CORREO}</h2>
+    <hr>
+
+    <div class="email-content">
+        {CUERPO_DEL_CORREO}
+    </div>
+</div>
+
+</body>
+</html>

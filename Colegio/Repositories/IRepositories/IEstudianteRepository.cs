@@ -13,4 +13,6 @@ public interface IEstudianteRepository : IRepository<Estudiante>
     IEnumerable<Estudiante> GetByUsuarios(List<string> listUsuarios);
 
     Estudiante GetByUsuario(string numeroDocumento);
+    
+    bool ExistsByUsuario(string numeroDocumento);
 }

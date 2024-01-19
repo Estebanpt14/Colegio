@@ -154,4 +154,28 @@ public class EstudianteRepositoryTest
 
         result.Should().BeNull();
     }
+    
+    [Fact]
+    public async void ExistsByUsuario_ReturnTrue()
+    {
+        var numeroDocumento = "123";
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.ExistsByUsuario(numeroDocumento);
+
+        result.Should().BeTrue();
+    }
+
+    [Fact]
+    public async void ExistsByUsuario_ReturnFalse()
+    {
+        var numeroDocumento = "1230";
+        var dbContext = await GetDatabaseContext();
+        var estudianteRepository = new EstudianteRepository(dbContext);
+
+        var result = estudianteRepository.ExistsByUsuario(numeroDocumento);
+
+        result.Should().BeFalse();
+    }
 }
